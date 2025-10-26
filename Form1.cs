@@ -57,19 +57,21 @@ namespace lab03
             if (cmbSolution.SelectedIndex == 0)
             {
                 txtPercent.Text = "28";
+
             }
             if (cmbSolution.SelectedIndex == 1)
             {
-                txtPercent.Text = "95";
+                txtPercent.Text = "15";
             }
             if (cmbSolution.SelectedIndex == 2)
             {
-                txtPercent.Text = "15";
+                txtPercent.Text = "40";
             }
             if (cmbSolution.SelectedIndex == 3)
             {
-                txtPercent.Text = "40";
+                txtPercent.Text = "95";
             }
         }
+
     }
 }
