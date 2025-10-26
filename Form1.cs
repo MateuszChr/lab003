@@ -14,13 +14,22 @@ namespace lab03
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            double Capacity = double.Parse(txtCapacity.Text);
-            double Count = double.Parse(txtCount.Text);
-            double Result = Capacity * Count;
-            double Percent = double.Parse(txtPercent.Text);
-            txtTotal.Text = Result.ToString();
-            double ResultPure = Result * (Percent / 100);
-            txtPure.Text = ResultPure.ToString();
+            try
+            {
+                double Capacity = double.Parse(txtCapacity.Text);
+                double Count = double.Parse(txtCount.Text);
+                double Percent = double.Parse(txtPercent.Text);
+
+                double Result = Capacity * Count;
+                double ResultPure = Result * (Percent / 100);
+
+                txtTotal.Text = Result.ToString();
+                txtPure.Text = ResultPure.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Proszê wpisaæ poprawne liczby!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
