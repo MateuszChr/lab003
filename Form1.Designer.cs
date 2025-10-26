@@ -58,6 +58,7 @@
             panel6 = new Panel();
             panel7 = new Panel();
             pbxPreview = new PictureBox();
+            label1 = new Label();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxPreview).BeginInit();
@@ -281,7 +282,7 @@
             lbTitle1.TabIndex = 1;
             lbTitle1.Text = "~ Mateusz Chryścienko || Bartłomiej Kielar";
             // 
-            // lbTitle
+            // lbTitlee
             // 
             lbTitle.AutoSize = true;
             lbTitle.Font = new Font("Segoe Print", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
@@ -326,12 +327,22 @@
             pbxPreview.TabIndex = 27;
             pbxPreview.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(786, 464);
+            label1.Name = "label1";
+            label1.Size = new Size(94, 17);
+            label1.TabIndex = 28;
+            label1.Text = "Version 1.3.64";
+            // 
             // Kalkulator_Procentowy
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(914, 510);
+            Controls.Add(label1);
             Controls.Add(pbxPreview);
             Controls.Add(panel7);
             Controls.Add(panel6);
@@ -406,5 +417,6 @@
         private Panel panel6;
         private Panel panel7;
         private PictureBox pbxPreview;
+        private Label label1;
     }
 }

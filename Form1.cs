@@ -1,3 +1,4 @@
+// test
 namespace lab03
 {
     public partial class Kalkulator_Procentowy : Form
