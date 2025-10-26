@@ -50,6 +50,7 @@
             // 
             // cmbVessel
             // 
+            cmbVessel.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbVessel.FormattingEnabled = true;
             cmbVessel.Items.AddRange(new object[] { "Kieliszek ( 50ml )", "Szklanka ( 300ml )" });
             cmbVessel.Location = new Point(279, 48);
@@ -123,6 +124,7 @@
             // 
             // cmbSolution
             // 
+            cmbSolution.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSolution.FormattingEnabled = true;
             cmbSolution.Items.AddRange(new object[] { "Wódka", "Spirytus", "Wino", "Whisty" });
             cmbSolution.Location = new Point(279, 148);
@@ -132,15 +134,19 @@
             // 
             // txtTotal
             // 
+            txtTotal.Enabled = false;
             txtTotal.Location = new Point(279, 349);
             txtTotal.Name = "txtTotal";
+            txtTotal.ReadOnly = true;
             txtTotal.Size = new Size(100, 23);
             txtTotal.TabIndex = 9;
             // 
             // txtPure
             // 
+            txtPure.Enabled = false;
             txtPure.Location = new Point(279, 393);
             txtPure.Name = "txtPure";
+            txtPure.ReadOnly = true;
             txtPure.Size = new Size(100, 23);
             txtPure.TabIndex = 10;
             // 
@@ -162,6 +168,7 @@
             btnClear.TabIndex = 12;
             btnClear.Text = "Wyczyść";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // txtCapacity
             // 
