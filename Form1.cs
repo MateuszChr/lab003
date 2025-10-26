@@ -1,8 +1,8 @@
 namespace lab03
 {
-    public partial class Form1 : Form
+    public partial class Kalkulator_Procentowy : Form
     {
-        public Form1()
+        public Kalkulator_Procentowy()
         {
             InitializeComponent();
         }

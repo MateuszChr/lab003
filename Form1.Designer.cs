@@ -1,6 +1,6 @@
 ﻿namespace lab03
 {
-    partial class Form1
+    partial class Kalkulator_Procentowy
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,201 +28,202 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
+            cmbVessel = new ComboBox();
+            lbVessel = new Label();
+            lbCapacity = new Label();
+            lbSolution = new Label();
+            lbPercent = new Label();
+            lbCount = new Label();
+            lbTotal = new Label();
+            lbPure = new Label();
+            cmbSolution = new ComboBox();
+            txtTotal = new TextBox();
+            txtPure = new TextBox();
+            btnCalculate = new Button();
+            btnClear = new Button();
+            txtCapacity = new TextBox();
+            txtPercent = new TextBox();
+            txtCount = new TextBox();
+            lbPer = new Label();
+            txtMl = new Label();
             SuspendLayout();
             // 
-            // comboBox1
+            // cmbVessel
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(279, 48);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 0;
+            cmbVessel.FormattingEnabled = true;
+            cmbVessel.Items.AddRange(new object[] { "Kieliszek ( 50ml )", "Szklanka ( 300ml )" });
+            cmbVessel.Location = new Point(279, 48);
+            cmbVessel.Name = "cmbVessel";
+            cmbVessel.Size = new Size(121, 23);
+            cmbVessel.TabIndex = 0;
             // 
-            // label1
+            // lbVessel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(70, 56);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Typ naczynia:";
+            lbVessel.AutoSize = true;
+            lbVessel.Location = new Point(70, 56);
+            lbVessel.Name = "lbVessel";
+            lbVessel.Size = new Size(78, 15);
+            lbVessel.TabIndex = 1;
+            lbVessel.Text = "Typ naczynia:";
             // 
-            // label2
+            // lbCapacity
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(70, 105);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Pojemność:";
+            lbCapacity.AutoSize = true;
+            lbCapacity.Location = new Point(70, 105);
+            lbCapacity.Name = "lbCapacity";
+            lbCapacity.Size = new Size(69, 15);
+            lbCapacity.TabIndex = 2;
+            lbCapacity.Text = "Pojemność:";
             // 
-            // label3
+            // lbSolution
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(70, 148);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Typ roztworu:";
+            lbSolution.AutoSize = true;
+            lbSolution.Location = new Point(70, 148);
+            lbSolution.Name = "lbSolution";
+            lbSolution.Size = new Size(79, 15);
+            lbSolution.TabIndex = 3;
+            lbSolution.Text = "Typ roztworu:";
             // 
-            // label4
+            // lbPercent
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(70, 200);
-            label4.Name = "label4";
-            label4.Size = new Size(120, 15);
-            label4.TabIndex = 4;
-            label4.Text = "Zawartość substancji:";
+            lbPercent.AutoSize = true;
+            lbPercent.Location = new Point(70, 200);
+            lbPercent.Name = "lbPercent";
+            lbPercent.Size = new Size(120, 15);
+            lbPercent.TabIndex = 4;
+            lbPercent.Text = "Zawartość substancji:";
             // 
-            // label5
+            // lbCount
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(70, 243);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 15);
-            label5.TabIndex = 5;
-            label5.Text = "Liczba sztuk naczyń:";
-            label5.Click += label5_Click;
+            lbCount.AutoSize = true;
+            lbCount.Location = new Point(70, 243);
+            lbCount.Name = "lbCount";
+            lbCount.Size = new Size(113, 15);
+            lbCount.TabIndex = 5;
+            lbCount.Text = "Liczba sztuk naczyń:";
+            lbCount.Click += label5_Click;
             // 
-            // label6
+            // lbTotal
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(70, 349);
-            label6.Name = "label6";
-            label6.Size = new Size(127, 15);
-            label6.TabIndex = 6;
-            label6.Text = "Łączna objętość płynu:";
+            lbTotal.AutoSize = true;
+            lbTotal.Location = new Point(70, 349);
+            lbTotal.Name = "lbTotal";
+            lbTotal.Size = new Size(127, 15);
+            lbTotal.TabIndex = 6;
+            lbTotal.Text = "Łączna objętość płynu:";
             // 
-            // label7
+            // lbPure
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(70, 396);
-            label7.Name = "label7";
-            label7.Size = new Size(151, 15);
-            label7.TabIndex = 7;
-            label7.Text = "Objętość czystej substancji:";
+            lbPure.AutoSize = true;
+            lbPure.Location = new Point(70, 396);
+            lbPure.Name = "lbPure";
+            lbPure.Size = new Size(151, 15);
+            lbPure.TabIndex = 7;
+            lbPure.Text = "Objętość czystej substancji:";
             // 
-            // comboBox2
+            // cmbSolution
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(279, 148);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 8;
+            cmbSolution.FormattingEnabled = true;
+            cmbSolution.Location = new Point(279, 148);
+            cmbSolution.Name = "cmbSolution";
+            cmbSolution.Size = new Size(121, 23);
+            cmbSolution.TabIndex = 8;
             // 
-            // textBox1
+            // txtTotal
             // 
-            textBox1.Location = new Point(279, 349);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 9;
+            txtTotal.Location = new Point(279, 349);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(100, 23);
+            txtTotal.TabIndex = 9;
             // 
-            // textBox2
+            // txtPure
             // 
-            textBox2.Location = new Point(279, 393);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 10;
+            txtPure.Location = new Point(279, 393);
+            txtPure.Name = "txtPure";
+            txtPure.Size = new Size(100, 23);
+            txtPure.TabIndex = 10;
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Location = new Point(393, 309);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 11;
-            button1.Text = "Oblicz";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Location = new Point(393, 309);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.TabIndex = 11;
+            btnCalculate.Text = "Oblicz";
+            btnCalculate.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnClear
             // 
-            button2.Location = new Point(491, 309);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 12;
-            button2.Text = "Wyczyść";
-            button2.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(491, 309);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 23);
+            btnClear.TabIndex = 12;
+            btnClear.Text = "Wyczyść";
+            btnClear.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtCapacity
             // 
-            textBox3.Location = new Point(279, 97);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 13;
+            txtCapacity.Location = new Point(279, 97);
+            txtCapacity.Name = "txtCapacity";
+            txtCapacity.Size = new Size(100, 23);
+            txtCapacity.TabIndex = 13;
             // 
-            // textBox4
+            // txtPercent
             // 
-            textBox4.Location = new Point(279, 192);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 14;
+            txtPercent.Location = new Point(279, 192);
+            txtPercent.Name = "txtPercent";
+            txtPercent.Size = new Size(100, 23);
+            txtPercent.TabIndex = 14;
             // 
-            // textBox5
+            // txtCount
             // 
-            textBox5.Location = new Point(279, 235);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 15;
+            txtCount.Location = new Point(279, 235);
+            txtCount.Name = "txtCount";
+            txtCount.Size = new Size(100, 23);
+            txtCount.TabIndex = 15;
             // 
-            // label8
+            // lbPer
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(383, 195);
-            label8.Name = "label8";
-            label8.Size = new Size(17, 15);
-            label8.TabIndex = 16;
-            label8.Text = "%";
+            lbPer.AutoSize = true;
+            lbPer.Location = new Point(383, 195);
+            lbPer.Name = "lbPer";
+            lbPer.Size = new Size(17, 15);
+            lbPer.TabIndex = 16;
+            lbPer.Text = "%";
             // 
-            // label9
+            // txtMl
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(385, 100);
-            label9.Name = "label9";
-            label9.Size = new Size(21, 15);
-            label9.TabIndex = 17;
-            label9.Text = "ml";
+            txtMl.AutoSize = true;
+            txtMl.Location = new Point(385, 100);
+            txtMl.Name = "txtMl";
+            txtMl.Size = new Size(21, 15);
+            txtMl.TabIndex = 17;
+            txtMl.Text = "ml";
             // 
-            // Form1
+            // Kalkulator_Procentowy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(comboBox1);
-            Name = "Form1";
+            Controls.Add(txtMl);
+            Controls.Add(lbPer);
+            Controls.Add(txtCount);
+            Controls.Add(txtPercent);
+            Controls.Add(txtCapacity);
+            Controls.Add(btnClear);
+            Controls.Add(btnCalculate);
+            Controls.Add(txtPure);
+            Controls.Add(txtTotal);
+            Controls.Add(cmbSolution);
+            Controls.Add(lbPure);
+            Controls.Add(lbTotal);
+            Controls.Add(lbCount);
+            Controls.Add(lbPercent);
+            Controls.Add(lbSolution);
+            Controls.Add(lbCapacity);
+            Controls.Add(lbVessel);
+            Controls.Add(cmbVessel);
+            Name = "Kalkulator_Procentowy";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -230,23 +231,23 @@
 
         #endregion
 
-        private ComboBox comboBox1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private Label label8;
-        private Label label9;
+        private ComboBox cmbVessel;
+        private Label lbVessel;
+        private Label lbCapacity;
+        private Label lbSolution;
+        private Label lbPercent;
+        private Label lbCount;
+        private Label lbTotal;
+        private Label lbPure;
+        private ComboBox cmbSolution;
+        private TextBox txtTotal;
+        private TextBox txtPure;
+        private Button btnCalculate;
+        private Button btnClear;
+        private TextBox txtCapacity;
+        private TextBox txtPercent;
+        private TextBox txtCount;
+        private Label lbPer;
+        private Label txtMl;
     }
 }
