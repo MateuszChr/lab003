@@ -124,6 +124,7 @@
             // cmbSolution
             // 
             cmbSolution.FormattingEnabled = true;
+            cmbSolution.Items.AddRange(new object[] { "Wódka", "Spirytus", "Wino", "Whisty" });
             cmbSolution.Location = new Point(279, 148);
             cmbSolution.Name = "cmbSolution";
             cmbSolution.Size = new Size(121, 23);
@@ -151,6 +152,7 @@
             btnCalculate.TabIndex = 11;
             btnCalculate.Text = "Oblicz";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // btnClear
             // 
