@@ -7,10 +7,7 @@ namespace lab03
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -36,11 +33,43 @@ namespace lab03
         {
             cmbSolution.SelectedIndex = -1;
             txtCapacity.Clear();
-            cmbVessel.SelectedIndex = -1;   
+            cmbVessel.SelectedIndex = -1;
             txtPercent.Clear();
             txtCount.Clear();
             txtTotal.Clear();
             txtPure.Clear();
+        }
+
+        private void cmbVessel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbVessel.SelectedIndex == 0)
+            {
+                txtCapacity.Text = "50";
+            }
+            else if (cmbVessel.SelectedIndex == 1)
+            {
+                txtCapacity.Text = "300";
+            }
+        }
+
+        private void cmbSolution_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSolution.SelectedIndex == 0)
+            {
+                txtPercent.Text = "28";
+            }
+            if (cmbSolution.SelectedIndex == 1)
+            {
+                txtPercent.Text = "95";
+            }
+            if (cmbSolution.SelectedIndex == 2)
+            {
+                txtPercent.Text = "15";
+            }
+            if (cmbSolution.SelectedIndex == 3)
+            {
+                txtPercent.Text = "40";
+            }
         }
     }
 }

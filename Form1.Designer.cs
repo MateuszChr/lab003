@@ -57,6 +57,7 @@
             cmbVessel.Name = "cmbVessel";
             cmbVessel.Size = new Size(121, 23);
             cmbVessel.TabIndex = 0;
+            cmbVessel.SelectedIndexChanged += cmbVessel_SelectedIndexChanged;
             // 
             // lbVessel
             // 
@@ -102,7 +103,6 @@
             lbCount.Size = new Size(113, 15);
             lbCount.TabIndex = 5;
             lbCount.Text = "Liczba sztuk naczyń:";
-            lbCount.Click += label5_Click;
             // 
             // lbTotal
             // 
@@ -126,11 +126,12 @@
             // 
             cmbSolution.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSolution.FormattingEnabled = true;
-            cmbSolution.Items.AddRange(new object[] { "Wódka", "Spirytus", "Wino", "Whisty" });
+            cmbSolution.Items.AddRange(new object[] { "Wódka smakowa", "Wino", "Whisty" });
             cmbSolution.Location = new Point(279, 148);
             cmbSolution.Name = "cmbSolution";
             cmbSolution.Size = new Size(121, 23);
             cmbSolution.TabIndex = 8;
+            cmbSolution.SelectedIndexChanged += cmbSolution_SelectedIndexChanged;
             // 
             // txtTotal
             // 
