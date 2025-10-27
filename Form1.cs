@@ -26,7 +26,7 @@ namespace lab03
             }
             catch
             {
-                MessageBox.Show("Proszê wpisaæ poprawne liczby!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Proszê wpisaæ poprawne dane!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -58,19 +58,23 @@ namespace lab03
             if (cmbSolution.SelectedIndex == 0)
             {
                 txtPercent.Text = "28";
+                txtCount.Text = "1";
 
             }
             if (cmbSolution.SelectedIndex == 1)
             {
                 txtPercent.Text = "15";
+                txtCount.Text = "1";
             }
             if (cmbSolution.SelectedIndex == 2)
             {
                 txtPercent.Text = "40";
+                txtCount.Text = "1";
             }
             if (cmbSolution.SelectedIndex == 3)
             {
                 txtPercent.Text = "95";
+                txtCount.Text = "1";
             }
         }
 
