@@ -1,4 +1,6 @@
 // test
+using System.Runtime.CompilerServices;
+
 namespace lab03
 {
     public partial class Kalkulator_Procentowy : Form
@@ -7,6 +9,9 @@ namespace lab03
         {
             InitializeComponent();
         }
+        private bool isFirstChangeVessel = true;
+        private bool isFirstChangeSolution = true;
+
 
 
 
@@ -19,6 +24,7 @@ namespace lab03
                 double Percent = double.Parse(txtPercent.Text);
 
                 double Result = Capacity * Count;
+
                 double ResultPure = Result * (Percent / 100);
 
                 txtTotal.Text = Result.ToString();
@@ -43,6 +49,9 @@ namespace lab03
 
         private void cmbVessel_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            isFirstChangeVessel = true;
+
             if (cmbVessel.SelectedIndex == 0)
             {
                 txtCapacity.Text = "50";
@@ -51,32 +60,58 @@ namespace lab03
             {
                 txtCapacity.Text = "300";
             }
+
+
+            isFirstChangeVessel = false;
         }
 
         private void cmbSolution_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbSolution.SelectedIndex == 0)
-            {
-                txtPercent.Text = "28";
-                txtCount.Text = "1";
 
-            }
-            if (cmbSolution.SelectedIndex == 1)
+            if (cmbSolution.SelectedIndex != -1)
             {
-                txtPercent.Text = "15";
-                txtCount.Text = "1";
-            }
-            if (cmbSolution.SelectedIndex == 2)
-            {
-                txtPercent.Text = "40";
-                txtCount.Text = "1";
-            }
-            if (cmbSolution.SelectedIndex == 3)
-            {
-                txtPercent.Text = "95";
-                txtCount.Text = "1";
+                isFirstChangeSolution = true;
+
+                if (cmbSolution.SelectedIndex == 0)
+                {
+                    txtPercent.Text = "28";
+                    txtCount.Text = "1";
+                }
+                else if (cmbSolution.SelectedIndex == 1)
+                {
+                    txtPercent.Text = "15";
+                    txtCount.Text = "1";
+                }
+                else if (cmbSolution.SelectedIndex == 2)
+                {
+                    txtPercent.Text = "40";
+                    txtCount.Text = "1";
+                }
+                else if (cmbSolution.SelectedIndex == 3)
+                {
+                    txtPercent.Text = "95";
+                    txtCount.Text = "1";
+                }
+
+                isFirstChangeSolution = false;
             }
         }
 
+        private void txtCapacity_TextChanged(object sender, EventArgs e)
+        {
+            if (isFirstChangeVessel == false)
+            {
+                cmbVessel.SelectedIndex = -1;
+            }
+
+        }
+
+        private void txtPercent_TextChanged(object sender, EventArgs e)
+        {
+            if (isFirstChangeSolution == false)
+            {
+                cmbSolution.SelectedIndex = -1;
+            }
+        }
     }
 }

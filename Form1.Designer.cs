@@ -193,6 +193,7 @@
             txtCapacity.Name = "txtCapacity";
             txtCapacity.Size = new Size(138, 25);
             txtCapacity.TabIndex = 13;
+            txtCapacity.TextChanged += txtCapacity_TextChanged;
             // 
             // txtPercent
             // 
@@ -200,6 +201,7 @@
             txtPercent.Name = "txtPercent";
             txtPercent.Size = new Size(138, 25);
             txtPercent.TabIndex = 14;
+            txtPercent.TextChanged += txtPercent_TextChanged;
             // 
             // txtCount
             // 
@@ -282,7 +284,7 @@
             lbTitle1.TabIndex = 1;
             lbTitle1.Text = "~ Mateusz Chryścienko || Bartłomiej Kielar";
             // 
-            // lbTitlee
+            // lbTitle
             // 
             lbTitle.AutoSize = true;
             lbTitle.Font = new Font("Segoe Print", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
