@@ -30,11 +30,11 @@ namespace lab03
                 txtTotal.Text = Result.ToString();
                 txtPure.Text = ResultPure.ToString();
 
-                if (Capacity <= 0 || Count <= 0 || Percent < 0)
+                if (Capacity <= 0 || Count <= 0 || Percent < 0 || Percent>100)
                 {
                     txtTotal.Clear();
                     txtPure.Clear();
-                    MessageBox.Show("Wartoœci musz¹ byæ dodatnie!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Wartoœci musz¹ byæ dodatnie, a procent nie mo¿e przekraczaæ 100!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
 
                 }
